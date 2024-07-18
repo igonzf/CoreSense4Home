@@ -10,7 +10,8 @@
             <RetryUntilSuccessful num_attempts="-1">
                 <Condition ID="IsDoorOpen" door_thfloatreshold="1.5"/>
             </RetryUntilSuccessful>
-            <Action ID="MoveTo" tf_frame="instruction_point"/>
+            <Action ID="MoveAlongAxis" speed="0.25" distance="0.8" axis="x"/>
+            <Action ID="MoveTo" is_truncated="false" distance_tolerance="0" tf_frame="instruction_point"/>
 
             <Repeat num_cycles="3">
                 <Sequence>
